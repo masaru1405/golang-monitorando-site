@@ -1,8 +1,16 @@
 package main
-import "fmt"
-import "os"
-import "net/http"
-import "time"
+
+import (
+	"fmt"
+	"net/http"
+	"os"
+	"strings"
+	"time"
+	//"io/ioutil"
+	"bufio"
+	"io"
+)
+
 
 const MONITORAMENTOS = 3
 const DELAY = 5
@@ -10,6 +18,9 @@ const DELAY = 5
 func main(){
 	exibeIntroducao()
 
+	leSitesDoArquivo()
+
+	//for infinito
 	for {
 		exibeMenu()
 		comando := leComando()
@@ -62,6 +73,7 @@ func iniciarMonitoramento(){
 			fmt.Println("Posição", j, "- Site:", site)
 			testaSite(site)
 		}
+		fmt.Println("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*")
 		time.Sleep(DELAY * time.Second) //espera 5 segundos
 	}
 }
@@ -83,13 +95,29 @@ func testaSite(site string){
 
 func leSitesDoArquivo() []string{
 	arquivo, err := os.Open("sites.txt")
+	//arquivo, err := ioutil.ReadFile("sites.txt")
 
 	if err != nil{
 		fmt.Println("Ocorreu um erro:", err)
 	}
-	fmt.Println(arquivo)
-
+	
 	var sites []string
+	leitor := bufio.NewReader(arquivo)
+
+	for {
+		linha, err := leitor.ReadString('\n')
+		linha = strings.TrimSpace(linha)
+		//fmt.Println(linha)
+		sites = append(sites, linha)
+
+		if err == io.EOF{
+			break
+		}
+		
+	}
+	arquivo.Close()
+	//fmt.Println(sites)
+
 	return sites
 }
 
