@@ -1,9 +1,18 @@
-https://www.alura.com.br- online: true
-https://www.caelum.com.br/- online: true
-https://www.youtube.com/- online: true
-https://www.alura.com.br- online: true
-https://www.caelum.com.br/- online: true
-https://www.youtube.com/- online: true
-https://www.alura.com.br- online: true
-https://www.caelum.com.br/- online: true
-https://www.youtube.com/- online: true
+09/06/2023 21:47:15 - https://www.alura.com.br- online: true
+09/06/2023 21:47:17 - https://www.caelum.com.br/- online: true
+09/06/2023 21:47:18 - https://www.youtube.com/- online: true
+09/06/2023 21:47:24 - https://www.alura.com.br- online: true
+09/06/2023 21:47:24 - https://www.caelum.com.br/- online: true
+09/06/2023 21:47:25 - https://www.youtube.com/- online: true
+09/06/2023 21:47:30 - https://www.alura.com.br- online: true
+09/06/2023 21:47:31 - https://www.caelum.com.br/- online: true
+09/06/2023 21:47:31 - https://www.youtube.com/- online: true
+09/06/2023 21:48:10 - https://www.alura.com.br- online: true
+09/06/2023 21:48:11 - https://www.caelum.com.br/- online: true
+09/06/2023 21:48:12 - https://www.youtube.com/- online: true
+09/06/2023 21:48:17 - https://www.alura.com.br- online: true
+09/06/2023 21:48:17 - https://www.caelum.com.br/- online: true
+09/06/2023 21:48:17 - https://www.youtube.com/- online: true
+09/06/2023 21:48:23 - https://www.alura.com.br- online: true
+09/06/2023 21:48:24 - https://www.caelum.com.br/- online: true
+09/06/2023 21:48:24 - https://www.youtube.com/- online: true
