@@ -9,6 +9,7 @@ import (
 	//"io/ioutil"
 	"bufio"
 	"io"
+	"strconv"
 )
 
 
@@ -88,8 +89,10 @@ func testaSite(site string){
 
 	if resp.StatusCode == 200 {
 		fmt.Println("Site:", site, "foi carregado com sucesso!")
+		registraLog(site, true)
 	}else{
 		fmt.Println("Site:", site, "esta com problemas. Status code:", resp.StatusCode)
+		registraLog(site, false)
 	}
 }
 
@@ -121,5 +124,15 @@ func leSitesDoArquivo() []string{
 	return sites
 }
 
+func registraLog(site string, status bool){
+	arquivo, err := os.OpenFile("log.txt", os.O_RDWR|os.O_CREATE|os.O_APPEND, 0666)
+
+	if err != nil{
+		fmt.Println("Erro:",err)
+	}
+
+	arquivo.WriteString(site + "- online: " + strconv.FormatBool(status) + "\n")
+	arquivo.Close()
+}
 
 
